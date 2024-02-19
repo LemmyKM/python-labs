@@ -20,4 +20,4 @@ while guess != number:
         print("Congrats! You won!")
         break
     else:
-        print("TRy again!")
+        print("Try again!")

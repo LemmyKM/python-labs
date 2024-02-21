@@ -1,5 +1,4 @@
 import string
-#from string import ascii_lowercase, ascii_uppercase,
 
 sentence = input('enter a sentence : ')
 analysis = {'lower_case': 0, 'upper_case': 0, 'punctuation' : 0, 'total_char' : 0}

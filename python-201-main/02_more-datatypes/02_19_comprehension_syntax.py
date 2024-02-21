@@ -6,3 +6,12 @@
 # but try to do it using a list comprehension.
 
 word = "codingnomads"
+
+sep = [n for n in word]
+print(sep)
+
+
+# of:
+indiv = tuple(word)
+print(indiv)
+

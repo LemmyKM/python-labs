@@ -7,5 +7,5 @@ string = "codingnomads"
 string_tup = tuple(string)
 print(string_tup)
 
-for char in string:
-    print(char)
+# for char in string:
+#     print(char)

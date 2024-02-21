@@ -7,7 +7,7 @@
 # Example input:  1,2,3,4,5,6,7,8,9,10
 # Example output: 2,4,6,8,10,9,7,5,3,1
 
-lijst = ['woord', 5.0, 'treshold', 987, 'vort', 'dikwijls']
+lijst = ['woord', 5.0, 'treshold', 987, 'vort', 'dikwijls', 12.4, 'bumper']
 for x, y in enumerate(lijst, start=1):
     if x % 2 == 0:
         print(y)

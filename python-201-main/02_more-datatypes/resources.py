@@ -15,3 +15,5 @@ list_length = random.randint(1, 20)
 randlist = list()
 for i in range(list_length):
     randlist.append(random.randint(1, 100))
+
+print(randlist)

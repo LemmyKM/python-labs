@@ -4,6 +4,6 @@
 # list_ = [1, 2, 6, 55, 2, 'hi', 4, 6, 1, 13]
 # unique_list = [55, 'hi', 4, 13]
 
-list = [3, 6.6, 67, 'hi', 495.0, 'selder', 'defons']
+list = [3, 6.6, 67, 'hi', 495.0, 'selder', 'defons', 'hi', 6.6, 3]
 unieke_lijst = set(list)
 print(unieke_lijst)

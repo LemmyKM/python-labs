@@ -13,12 +13,15 @@
 # with your mentor or chat about it on our forum.
 
 from resources import randlist
-wilkeurig_lijst = randlist
-gesorteerd = sorted(wilkeurig_lijst)
-print(gesorteerd)
 
+list = []
+randlist.sort()
 
-# gesorteerd = randlist.sort()
-# print(gesorteerd)
+if len(randlist) % 2 != 0:
+    randlist.append(0)
 
-# Write your code below here
+for num in randlist:
+    list.append(num)  
+    if len(list) == 2:
+        print(tuple(list))
+        list.clear()

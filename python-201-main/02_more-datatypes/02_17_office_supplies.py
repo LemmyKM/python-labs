@@ -22,3 +22,8 @@ office = [
     {"full_name": "Creed Bratton", "item": "mung beans"},
     {"full_name": "Darryl Philbin", "item": "forklift"},
 ]
+
+for x in office: 
+    name = x['full_name']
+    name_list = name.split()
+    print(f" {name_list[1]}, {name_list[0]:<15} \t {x['item']:^}" ) 

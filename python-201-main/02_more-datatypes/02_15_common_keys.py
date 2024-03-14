@@ -7,8 +7,13 @@
 # Example output:
 # result = {"a": 3, "b": 2, "c": 7 , "d": 2}
 
+from collections import Counter
+
 dict_1 = {"a": 1, "b": 2, "c": 3}
 dict_2 = {"a": 2, "c": 4 , "d": 2}
 
-for k, v in dict_1, dict_2.items():
-    print(sum.values)
+dict3 = Counter(dict_1) + Counter(dict_2)
+print(dict3)
+
+# for v in dict3.values():
+#     print(v)

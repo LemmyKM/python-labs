@@ -7,6 +7,7 @@
 
 word = "codingnomads"
 
+
 sep = [n for n in word]
 print(sep)
 

@@ -8,3 +8,10 @@ function say_hello("name"):
 
 greeting = hello(name)
 print(greeting)
+
+
+# def say_hello(name):
+#     return print(f"Hello {name}!")
+
+# greeting = say_hello('Schaapjes')
+# print(greeting)

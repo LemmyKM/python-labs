@@ -4,8 +4,14 @@
 
 example_list = [1, 2, 3, 4, 5, 6, 7]
 
-def stats():
+def stats(example_list):
   # define the function here
-  pass
+  mn = min(example_list)
+  print(mn)
+  mx = max(example_list)
+  print(mx)
+  avg = sum(example_list) / len(example_list)
+  print(avg)
 
 # call the function below here
+stats(example_list)

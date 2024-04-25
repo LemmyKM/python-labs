@@ -13,19 +13,23 @@ lengte = []
 file_path = Path.home() / 'Python/CODINGNOMADS/labs/python-201-main/03_file-input-output/words.txt'
 with open(file_path, mode='r', encoding='utf-8') as file:
     words = file.readlines()
-    total_words = len(words)
     for w in words:
-        lengte_word = lengte.append(len(w))
-        if len(w) == 3:
-            print(w, end='')
-        elif len(w) == 22:
-            print(w, end='')
-        else:
-            pass
+        lengte_word = len(w)
+        lengte.append(lengte_word)
 
-kortst = min(lengte)
-langst = max(lengte)
+shortest = min(lengte)
+longest = max(lengte)
+print()
 
-print(f"Total number of words = {total_words}")
-print(f"Shortest word = {kortst}")
-print(f"Longest word = {langst}")
+with open(file_path, mode='r', encoding='utf-8') as file:
+    words = file.readlines()
+    for w in words:
+        if len(w) == shortest:
+            print(w, end='')
+        elif len(w) == longest:
+            print(w, end='')
+
+
+print(f"SHORTEST word is {shortest} char long.")
+print(f"LONGEST word is {longest} char long.")
+print(f"TOTAL number of words is {len(lengte)}")

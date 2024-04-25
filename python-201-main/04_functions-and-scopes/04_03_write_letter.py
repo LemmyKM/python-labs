@@ -6,9 +6,9 @@
 
 
 def write_letter(name, text):
-    greeting = f"Hello {name}, '\n' {text} Stay well and we hope to see you there {name}."
+    greeting = f"Hello {name}, '\n\n\n' {text} Stay well and we hope to see you there {name}."
     return greeting 
 
 print(write_letter(
-            'Karel', 'We are pleased to announce that you have been nominated for the Pulitzer price."\n"'))
+            'Karel', 'We are pleased to announce that you have been nominated for the Pulitzer price."\n\n"'))
 

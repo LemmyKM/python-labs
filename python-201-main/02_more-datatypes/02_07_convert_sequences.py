@@ -11,3 +11,4 @@ print(string_to_tuple)
 
 tuple_to_list = list(string_to_tuple)
 print(tuple_to_list)
+print(string.replace('c', 'k'))

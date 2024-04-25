@@ -12,3 +12,4 @@ print(lijstje)
 # print most common word :
 common = Counter(lijstje)
 print(common)
+

@@ -8,7 +8,7 @@ own folder."""
 
 from pathlib import Path
 import shutil
-#import pprint
+from pprint import pprint
 
 path_bureaublad = Path.home() /'Desktop'
 path_strayfiles_folder = Path.home() /'Desktop'/'strayfiles'
@@ -18,6 +18,7 @@ path_txt_folder = Path.home() /'Desktop/txt_folder'
 path_doc_folder = Path.home() /'Desktop/doc_folder'
 path_pdf_folder = Path.home() /'Desktop/pdf_folder'
 path_tif_folder = Path.home() /'Desktop/tif_folder'
+
 
 file_type = {'png': 0, 'app': 0, 'txt': 0, 'doc': 0, 'pdf': 0, 'tif': 0}
 
@@ -51,4 +52,4 @@ for file in path_bureaublad.iterdir():
         shutil.move(file, path_strayfiles_folder)
         file_type['strayfiles'] += 1
 
-print(file_type)
+pprint(file_type)

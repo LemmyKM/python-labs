@@ -4,6 +4,7 @@
 # already defined in the `codingnomads/` folder.
 
 
+from codingnomads import ingredients as i
 
 
 digestible = i.prepare(i.potato)

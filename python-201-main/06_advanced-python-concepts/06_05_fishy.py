@@ -2,3 +2,8 @@
 # only words ending with -fish. Tip: Use an `if` statement in the listcomp.
 
 fish_tuple = ('blowfish', 'clownfish', 'catfish', 'octopus')
+
+
+
+lijst = [x for x in fish_tuple if x.endswith('fish')]
+print(lijst)

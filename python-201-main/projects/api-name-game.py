@@ -5,7 +5,7 @@ import time
 import sys
 
 
-player_name = input('\nEnter your name; you will be allocated a fictious name based on your real name : ')
+player_name = input('\nEnter your name; you will be allocated a fictious name based on the length of your given name : ')
 time.sleep(1)
 print()
 
@@ -16,20 +16,8 @@ URL = f"https://uzby.com/api.php?min={min_len}&max={max_len}"
 
 uzby_name = requests.get(URL)
 
-
-
-
-
-
-print(f"Hello {uzby_name}!  Welcome to the game.")
+print(f"Hello {uzby_name.text}!  Welcome to the game.")
 time.sleep(1)
-
-
-
-
-
-
-
 
 
 

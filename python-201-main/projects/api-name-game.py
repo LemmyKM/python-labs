@@ -5,14 +5,12 @@ import time
 import sys
 
 
-player_name = input('\nEnter your name; you will be allocated a fictious name based on the length of your given name : ')
-time.sleep(1)
-print()
+length_player_name = 0
+while length_player_name < 2:
+    player_name = input('Enter your name (between 2 and 40 characters long) : ')
+    length_player_name = len(player_name)
 
-
-min_len = 4
-max_len = len(player_name)
-URL = f"https://uzby.com/api.php?min={min_len}&max={max_len}"
+URL = f"https://uzby.com/api.php?min={length_player_name}&max={length_player_name}"
 
 uzby_name = requests.get(URL)
 

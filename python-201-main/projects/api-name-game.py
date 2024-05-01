@@ -52,7 +52,7 @@ time.sleep(1)
 #                 print('That sounds like a great plan. You need a weapon!')
 #                 break
 #             elif fight_or_flee == 'fight' and sword == True:
-#                 print("\nThat's right! Kill the mother******!!!!! Well done! You won!")
+#                 print("\nThat's right! Kill the beast!! Well done! You won!")
 #                 sys.exit()
 #             elif fight_or_flee == 'fight':
 #                 print("\nThat was a stupid decision! Without a weapon the dragon is tearing you to pieces!! You're dead!")

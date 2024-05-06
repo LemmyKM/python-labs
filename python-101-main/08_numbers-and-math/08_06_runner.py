@@ -2,5 +2,8 @@
 # What is their average speed in kilometers per hour?
 # (Tip: 1 mile = 1.6 km)
 
-avg = (16 / 30.5) * 60
-print(avg)
+distance = 10
+time_minutes = 30.5
+
+avg = (distance / time_minutes) * 60 * 1.608
+print(f"{avg:.2f} km/h")

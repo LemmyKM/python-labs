@@ -21,14 +21,3 @@ print(has_pdf)
 
 
 
-
-
-
-
-# has_pdf = False
-
-# if '.pdf'  in filename:
-#     has_pdf = True
-#     print("It's a pdf!")
-
-

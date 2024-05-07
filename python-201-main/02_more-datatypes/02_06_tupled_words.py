@@ -5,8 +5,6 @@
 # input = "hello world"
 # result_list = [('h', 'e', 'l', 'l', 'o'), ('w', 'o', 'r', 'l', 'd')]
 
-userinput = input('enter a sentence : ')
-for word in userinput:
-    splits = tuple(word)
-    print(splits)
-
+user_input = 'good riddance'
+a = [tuple(x,) for x in user_input.split(" ")]
+print(a)

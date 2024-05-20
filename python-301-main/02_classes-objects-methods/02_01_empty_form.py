@@ -33,10 +33,12 @@ class PatientForm:
     def surgery(self, *performed_surgery):
         return f"performed surgery : {performed_surgery}"
     
-    def issue(self,*known_issues):
+    def issue(self, *known_issues):
         return f"known issues are : {known_issues}."
 
-    
+    def __str__(self):
+        return f"{self.first_name}, last name : {self.last_name}"
+
 patient = PatientForm('Karel', 'Swinnen')
 
 print()
@@ -46,3 +48,6 @@ print(patient.weight(80))
 print(patient.doctor('Mitchell'))
 print(patient.surgery('burst appendix', 'hart valve'))
 print(patient.issue('hypertension', 'bee sting allergy'))
+
+print()
+print(patient)

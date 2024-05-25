@@ -41,7 +41,7 @@ class Bike:
         self.speed = speed
 
     def __str__(self):
-        return f"Your bike's brake power is at {self.brakes}%, the tyres are {self.tyres} and you're going at {self.speed} km/h."
+        return f"Your bike's brakes are {self.brakes}, the tyres are {self.tyres} and you're going at {self.speed} km/h."
 
         
 

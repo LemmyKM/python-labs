@@ -9,4 +9,10 @@
 # CHALLENGE: Do some research online and find a solution that works
 # to flatten a list of any depth. Can you understand the code used?
 
+
 starter_list = [[1, 2, 3, 4], [5, 6], [7, 8, 9]]
+
+flat_list = []
+for row in starter_list:
+    flat_list.extend(row)
+print(flat_list)

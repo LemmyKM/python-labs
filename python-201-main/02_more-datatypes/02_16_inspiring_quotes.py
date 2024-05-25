@@ -21,6 +21,6 @@ for author in famous_quotes:
     q = author['quote']
     name = author['full_name']
     name_split = name.split(' ')
-    print(name_split)
-   # print(f"\"{q}\" - {name_split[1]}, {name_split[0]}")
+   # print(name_split)
+    print(f"\"{q}\" - {name_split[1]}, {name_split[0]}")
     

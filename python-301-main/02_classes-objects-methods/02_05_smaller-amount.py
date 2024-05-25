@@ -29,7 +29,9 @@ class Ingredient:
         else:
             amount = p.amount
         return Ingredient(name=new_name, amount=amount)
-    
+#        return Ingredient(name=new_name, amount=1) original
+
+
     def __str__(self):
         return f"{self.name} ({self.amount})"
     

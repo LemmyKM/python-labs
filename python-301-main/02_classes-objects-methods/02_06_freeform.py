@@ -12,7 +12,7 @@
 # Animals, paintings, card games, sports teams, trees, people etc...
 
 class Dishwasher:
-    pass
+    def __init__(self, turn)
 
 
 class Bike:

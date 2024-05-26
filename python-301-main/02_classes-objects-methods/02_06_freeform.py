@@ -26,12 +26,21 @@ class Dishwasher:
     def start(self):
         return 'the dishwasher is on and has started ...'
         # time.sleep(6)
-        # print('Dishes are clean!')
+        # return 'Dishes are clean!'
+
+    def __add__(self, other):
+        cutlery_and_glasses = self.cutlery + other.glasses
+        return Dishwasher(cutlery=cutlery_and_glasses, glasses=12, mugs=11, plates=16)
+
 
 dishes = Dishwasher(17, 12, 11, 16)
 print(dishes)
 cycle = dishes.start()
 print(cycle)
+a = Dishwasher(17, 12, 11, 16)
+b = Dishwasher(17, 12, 11, 16)
+c = a.__add__(b)
+print(c)
 
 
 class Bike:
@@ -57,5 +66,5 @@ class Laptop:
         self.screen = screen
 
     def __str__(self):
-        pass
+        return f"The laptop's battery is at {self.power}%, the temperaturen is {self.temperature}degC and your screen brightness is {self.screen}."
     

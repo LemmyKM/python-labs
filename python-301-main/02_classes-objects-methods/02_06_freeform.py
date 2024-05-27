@@ -32,7 +32,6 @@ class Dishwasher:
         cutlery_and_glasses = self.cutlery + other.glasses
         return Dishwasher(cutlery=cutlery_and_glasses, glasses=12, mugs=11, plates=16)
 
-
 dishes = Dishwasher(17, 12, 11, 16)
 print(dishes)
 cycle = dishes.start()
@@ -53,13 +52,10 @@ class Bike:
     def __str__(self):
         return f"Your bike's brakes are {self.brakes}, the tyres are {self.tyres} and you're going at {self.speed} km/h."
 
-        
-
 wheels = Bike('faulty', 'flat', 60)
 print(wheels)
 
 print()
-
 
 class Laptop:
     def __init__(self, power, temperature, screen):

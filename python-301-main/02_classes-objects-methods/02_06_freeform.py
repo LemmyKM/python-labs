@@ -25,7 +25,7 @@ class Dishwasher:
 
     def start(self):
         print('the dishwasher is on and has started ...')
-        time.sleep(6)
+        time.sleep(4)
         return 'Dishes are clean!'
 
     def __add__(self, other):
@@ -61,13 +61,20 @@ print(wheels)
 print()
 
 
-# class Laptop:
-#     def __init__(self, power, temperature, screen):
-#         self.power = power
-#         self.temperature = temperature
-#         self.screen = screen
+class Laptop:
+    def __init__(self, power, temperature, screen):
+        self.power = power
+        self.temperature = temperature
+        self.screen = screen
 
-#     def __str__(self):
-#         return f"The laptop's battery is at {self.power}%, the temperaturen is {self.temperature}degC and your screen brightness is {self.screen}."
-    
+    def __str__(self):
+        return f"The laptop's battery is at {self.power}%, the temperaturen is {self.temperature}degC and your screen brightness is {self.screen}."
+
+    def price(self):
+        return(2500)
+
+computer = Laptop(100, 55, 46)
+print(computer)  
+print(computer.price())
+
 print()

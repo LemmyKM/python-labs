@@ -11,9 +11,10 @@ class Ingredient:
         self.amount = amount
 
     def get_info(self):
+        self.name = self.name.title()  # --> search terms for wikipedia must be with a capital
         self.wiki = f"https://en.wikipedia.org/wiki/{self.name}"
 #        response = requests.get(self.wiki)  no need for the requests module with 'webbrowser'
         webbrowser.open(self.wiki, new=2)
 
-recipe = Ingredient('Rice', 11)
+recipe = Ingredient('boeing', 11)
 print(recipe.get_info())

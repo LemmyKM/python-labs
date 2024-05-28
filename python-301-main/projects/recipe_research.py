@@ -16,5 +16,11 @@ class Ingredient:
 #        response = requests.get(self.wiki)  no need for the requests module with 'webbrowser'
         webbrowser.open(self.wiki, new=2)
 
-recipe = Ingredient('boeing', 11)
+    def cook(self):
+        self.wiki = f"https://www.allrecipes.com/search?q={self.name}"
+        webbrowser.open(self.wiki, new=2)
+
+recipe = Ingredient('chicken', 2)
 print(recipe.get_info())
+
+recipe.cook()

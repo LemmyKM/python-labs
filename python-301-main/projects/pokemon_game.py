@@ -11,3 +11,17 @@
 # - Display messages that explain who won or lost a battle
 # - If a Pokemon loses a battle, they lose some of their `hp`
 # - If you call the `feed()` method on a Pokemon, they regain some `hp`
+
+import random
+
+class Pokemon:
+    def __init__(self, name, primary_type, hp, max_hp):
+        self.name = input('What is your name? : ').capitalize()
+        self.primary_type = ['water', 'fire', 'grass']
+        self.hp = 4
+        self.max_hp = 10
+
+    def battle(self):
+        while True:
+            print(f"Fight now {self.name}!")
+            user_power = input('Enter 0 for Water, 1 for Fire, 2 for grass')

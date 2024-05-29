@@ -22,15 +22,32 @@ class Pokemon:
         self.max_hp = 10
 
     def battle(self):
+        # water > fire > grass > water
         while True:
             print(f"Fight now {self.name}!")
-            user_choice = input('Enter [W] for [W]ater, [F] for [F]ire, [G] for [G]rass.\n["Feed"] to feed more HP.\n[Q] to ["Quit]. : ').lower()
+            user_choice = input('Enter 0 for Water, 1 for Fire, 2 for Grass.\n3 to feed more HP.\n4 to ["Quit]. : ').lower()
             battle_choice = [0, 1, 2]
             computer_choice = random.choice(battle_choice)
-            if user_choice == 'q':
+            if user_choice == 4:
                 break
-            elif user_choice == 'feed':  # --> def feed()
+            elif user_choice == 3:  # --> def feed()
                 self.feed()
             elif user_choice.isdigit():
                 user_choice = int(user_choice)
-                
+                if user_choice > computer_choice and user_choice < 3:
+                    if self.hp == self.max_hp:
+                        print(f'You won. Computer choice is {self.primary_type[computer_choice].title()}.')
+                        print('You reached Max HP.')
+                    else:
+                        self.hp += 1
+                        print(f'You won. Computer choice is {self.primary_type[computer_choice].title()}.')
+            
+
+
+
+    def feed(self):
+        pass
+
+
+p = Pokemon()
+p.battle()

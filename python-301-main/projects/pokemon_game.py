@@ -13,9 +13,10 @@
 # - If you call the `feed()` method on a Pokemon, they regain some `hp`
 
 import random
+import sys
 
 class Pokemon:
-    def __init__(self, name, primary_type, hp, max_hp):
+    def __init__(self) -> None:
         self.name = input('What is your name? : ').capitalize()
         self.primary_type = ['water', 'fire', 'grass']
         self.hp = 4
@@ -25,29 +26,48 @@ class Pokemon:
         # water > fire > grass > water
         while True:
             print(f"Fight now {self.name}!")
-            user_choice = input('Enter 0 for Water, 1 for Fire, 2 for Grass.\n3 to feed more HP.\n4 to ["Quit]. : ').lower()
+            user_choice = input('Enter 0 for Water, 1 for Fire, 2 for Grass.\n3 to feed more HP.\n4 to "Quit". : ').lower()
+            print()
             battle_choice = [0, 1, 2]
             computer_choice = random.choice(battle_choice)
-            if user_choice == 4:
-                break
-            elif user_choice == 3:  # --> def feed()
+            if user_choice == '4':
+                sys.exit()
+            elif user_choice == '3':
                 self.feed()
             elif user_choice.isdigit():
                 user_choice = int(user_choice)
-                if user_choice > computer_choice and user_choice < 3:
+                if user_choice < computer_choice and user_choice < 2:
                     if self.hp == self.max_hp:
                         print(f'You won. Computer choice is {self.primary_type[computer_choice].title()}.')
                         print('You reached Max HP.')
                     else:
                         self.hp += 1
                         print(f'You won. Computer choice is {self.primary_type[computer_choice].title()}.')
-            
-
-
+                        print(f"Your HP is {self.hp}.")
+                elif user_choice > computer_choice and user_choice < 3:
+                    self.hp -= 1
+                    print(f"You lost. Computer choice is {self.primary_type[computer_choice].title()}.")
+                    print(f"Your HP is {self.hp}.")
+                    if self.hp == 0:
+                        print('Game Over.')
+                        break
+                elif user_choice == computer_choice:
+                    print("It's a draw.")
+                    print(f'Your HP is {self.hp}.')
+                else:
+                    print('That is not an option. Try again.')
+            else:
+                print('That is not an option. Try again.')
 
     def feed(self):
-        pass
-
+        if self.hp <= 5:
+            self.hp += 3
+            print(f"You gained 3 HP. Current HP is {self.hp}.")
+        elif self.hp > 5:
+            self.hp += 1
+            print(f"You gained 1 HP. Current HP is {self.hp}.")
+        else:
+            print(f"You can't feed for the moment. You already have Max HP {self.max_hp}.")
 
 p = Pokemon()
 p.battle()

@@ -24,4 +24,13 @@ class Pokemon:
     def battle(self):
         while True:
             print(f"Fight now {self.name}!")
-            user_power = input('Enter 0 for Water, 1 for Fire, 2 for grass')
+            user_choice = input('Enter [W] for [W]ater, [F] for [F]ire, [G] for [G]rass.\n["Feed"] to feed more HP.\n[Q] to ["Quit]. : ').lower()
+            battle_choice = [0, 1, 2]
+            computer_choice = random.choice(battle_choice)
+            if user_choice == 'q':
+                break
+            elif user_choice == 'feed':  # --> def feed()
+                self.feed()
+            elif user_choice.isdigit():
+                user_choice = int(user_choice)
+                

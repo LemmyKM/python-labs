@@ -25,3 +25,21 @@ class Spice(Ingredient):
     def grind(self):
         print(f"You have now {self.amount} of ground {self.name}.")
 
+    def chop(self):
+        print(f"The spice {self.name} is now chopped ({self.amount}gr.)")
+
+p = Ingredient('peas', 12)
+print(p)
+s = Spice('salt', 200)
+print(s.expire())  # added expire method
+
+c = Ingredient('carrots', 3)
+p = Spice('pepper', 20)
+p.grind()  # ground pepper
+# c.grind()
+
+# chopped spices but not Ingredient()
+d = Spice('basil', 50)
+e = Ingredient('broccoli', 2)
+d.chop()
+e.chop()

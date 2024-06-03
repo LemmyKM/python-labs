@@ -40,8 +40,8 @@ class Vegetable(Ingredient):
     def chop(self):
         print(f"Your {self.name} are now chopped in slices.")
     
-    # def expire(self):
-    #     pass
+    def expire(self):
+        print(f"These {self.name} are not looking great.")
 
 
 # p = Ingredient('peas', 12)

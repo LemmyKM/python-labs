@@ -1,5 +1,6 @@
 import random
-from time import sleep
+import time
+
 class Hero:
     def __init__(self, name, level):
         self.name = name
@@ -12,10 +13,10 @@ class Hero:
         opp_dice = random.randint(1, 20)
 
         print("Our knight raises powerfield ...")
-        sleep(3)
+        time.sleep(3)
         print(f"{hero_dice}...")
         print(f"{opponent.name} raises powerfield ...")
-        sleep(3)
+        time.sleep(3)
         print(f"{opp_dice}...")
 
         if hero_dice >= opp_dice:
@@ -28,6 +29,40 @@ class Opponent:
         self.name = name
         self.level = level
 
+def start_game():
+    opponents = [
+        Opponent('Belzebub', 20),
+        Opponent('Pilatus', 10),
+        Opponent('Herodes', 5),
+        Opponent('Matteus', 7),
+        Opponent('Lucas', 15),
+    ]
+    hero = Hero('Jesus', 20)
 
-a = Hero('Gabriel', 10)
-print(a.attack)
+    while True:
+        current_opponent = random.choice(opponents)
+        print(f"The gates of Hell are opened and {current_opponent.name} with a power level of {current_opponent.level} materialises in front of {hero.name}.\n")
+        act = input("Do you want to [s]trike, (f)lee or (l)ook around? ")
+        while act not in ['s', 'f', 'l', 'q']:
+            print('please enter [s, f, l]')
+            print('To quit the game enter [q]')
+            act = input("Do you want to [s]trike, (f)lee or (l)ook around?")
+
+        if act == 's':
+            if hero.attack(current_opponent):
+                opponents.remove(current_opponent)
+            else:
+                print(f"{hero.name} ascends to Heaven, but luckily today is Easter and he rematerialises in a cloud of rice pudding.")
+
+        elif act == 'f':
+            print(f"These sandals are not suited to take on {current_opponent.name}. I will fight him another day when I am wearing my allstars.")
+        
+        elif act == 'l':
+            print(f"{hero.name} sees the light, and also sees {current_opponent} with power level {current_opponent.level}")
+
+        elif act == 'q':
+            print('See you again on Easter day...')
+            break
+
+
+start_game()

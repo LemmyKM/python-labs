@@ -12,3 +12,37 @@
 #
 # - A `Vehicle()` parent class, with `Truck()` and `Motorcycle()` child classes.
 # - A `Restaurant()` parent class, with `Gourmet()` and `FastFood()` child classes.
+
+class Aircraft:
+    def __init__(self, type, engines_nr, engine_type):
+        self.type = type
+        self.engines_nr = engines_nr
+        self.engine_type = engine_type
+
+class Boeing(Aircraft):
+    def __init__(self, type, engines_nr, engine_type, seats):
+        super().__init__(type, engines_nr, engine_type)
+        self.seats = seats
+
+class Helicopter(Boeing):
+    def __init__(self, type, engines_nr, engine_type, wheels_skid):
+        super().__init__(type, engines_nr, engine_type)
+        self.wheels_skid = wheels_skid
+
+class Cessna:
+    def __init__(self, type, wing, wheels):
+        self.type = type
+        self.wing = wing
+        self.wheels = wheels
+
+    def __str__(self):
+        return f"The Cessna {self.type} has a {self.wing} wing and {self.wheels} wheels."
+
+b = Boeing(747, 4, 'turbine', 267)
+print(b.seats, b.type)
+
+c = Cessna(210, 'high', 'retractable')
+print(c)
+
+d = Cessna(190, 'high', 'fixed')
+print(d)

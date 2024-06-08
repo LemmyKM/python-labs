@@ -28,5 +28,5 @@ class ActionMovie(Movie):
 mov = Movie(2001, 'Mulholland Drive')
 print(mov.year)
 print()
-action = ActionMovie(2001, 'Moulin Rouge', 10)
-print(action.title)
+action = ActionMovie(2001, 'Moulin Rouge', 0)
+print(action.pg)

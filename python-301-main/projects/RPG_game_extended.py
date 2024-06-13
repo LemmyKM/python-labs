@@ -30,6 +30,13 @@ class Opponent:
         self.name = name
         self.level = level
 
+    def attack():
+        pass
+
+
+class Weak_Opponent:
+    pass
+
 def start_game():
     opponents = [
         Opponent('Belzebub', 20),
@@ -55,8 +62,7 @@ def start_game():
             if hero.attack(current_opponent):
                 opponents.remove(current_opponent)
             else:
-                print(f"{hero.name} ascends to Heaven, but luckily today is Easter and he rematerialises in a cloud of rice pudding.")
-
+                None
         elif act == 'f':
             print(f"These sandals are not suited to take on {current_opponent.name}. I will fight him another day when I am wearing my allstars.")
         

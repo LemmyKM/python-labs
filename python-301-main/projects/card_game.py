@@ -25,8 +25,62 @@ class Card:
     
 
 
-
+    def __equal__(self, other):
+        return self.cmp(other) == 0
     
+    def __smallerequal__(self, other):
+        return self.cmp(other) <= 0
+    
+    def __greaterequal__(self, other):
+        return self.cmp(other) >= 0
+    
+    def __greaterthan__(self,other):
+        return self.cmp(other) > 0
+    
+    def __smallerthan__(self, other):
+        return self.cmp(other) < 0
+    
+    def __notequal__(self, other):
+        return self.cmp(other) != 0
+    
+class Deck:
+    def __init__(self):
+        self.cards = []
+        for suit in range(4):
+            for rank in range(1, 14):
+                self.cards.append(Card(suit, rank))
 
-kaart = Card(2, 4)
-print(kaart)
+    def __str__(self):
+        s = ""
+        for i in range(len(self.cards)):
+            s = s + " " * i + str(self.cards[i]) + "\n"
+            return s
+
+    def shuffle(self):
+        import random
+        rng = random.Random()
+        rng.shuffle(self.cards)
+        # num_cards = len(self.cards)
+        # for i in range(num_cards):
+        #     j = rng.randrange(i, num_cards)
+        #     (self.cards[i], self.cards[j]) = (self.cards[j], self.cards[i])
+             
+    def remove(self, card):
+        if card in self.cards:
+            self.cards.remove(card)
+            return True
+        else:
+            False
+
+    def pop(self):
+        return self.cards.pop()
+    
+    def is_empty(self):
+        return self.cards == []
+
+
+red_deck = Deck()
+print(red_deck)
+
+# kaart = Card(2, 4)
+# print(kaart)

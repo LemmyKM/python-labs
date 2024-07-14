@@ -6,4 +6,11 @@
 # Your task is to use the API to find information about all the cats that
 # appear in Studio Ghibli films.
 
-BASE_URL = "https://ghibliapi.herokuapp.com/"
+import requests
+from pprint import pprint
+
+BASE_URL = "https://ghibliapi.vercel.app/people?name=cat"
+request = requests.get(BASE_URL)
+
+data = request.json()
+pprint(data)

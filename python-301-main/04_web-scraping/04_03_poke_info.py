@@ -11,4 +11,12 @@
 # `.html` page which allows you to also display the sprites of each Pokémon.
 # Check out the guides they provide: https://pokeapi-how.appspot.com/page5
 
-BASE_URL = "https://pokeapi.co/api/v2/"
+import requests
+from pprint import pprint
+from pathlib import Path
+
+BASE_URL = "https://pokeapi.co/api/v2/pokemon"
+request = requests.get(BASE_URL)
+
+data = request.json()
+pprint(data['results'][0]['name'])

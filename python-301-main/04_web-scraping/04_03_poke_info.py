@@ -15,8 +15,28 @@ import requests
 from pprint import pprint
 from pathlib import Path
 
-BASE_URL = "https://pokeapi.co/api/v2/pokemon"
+BASE_URL = "https://pokeapi.co/api/v2/pokemon?limit=6"
 request = requests.get(BASE_URL)
 
 data = request.json()
-pprint(data['results'][0]['name'])
+
+def name_number_type():
+    for name in data['results']:
+        for k, v in name.items():
+            print(k, v)
+
+name_number_type()
+
+
+
+# for k, v in data['results'][3].items():
+#     print(k, v)
+
+# pprint(data['results'][0]['name'])
+
+# for name in data['results']:
+#     for k, v in name.items():
+#         print(k, v)
+    
+# for name in data['results']:
+#     print(name['name'])

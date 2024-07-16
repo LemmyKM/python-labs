@@ -8,4 +8,5 @@ import requests
 
 url = 'https://codingnomads.com'
 page = requests.get(url)
+
 print(page.text)

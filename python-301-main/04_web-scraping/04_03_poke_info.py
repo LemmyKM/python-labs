@@ -21,11 +21,12 @@ request = requests.get(BASE_URL)
 data = request.json()
 
 def name_number_type():
-    for name in data['results']:
-        for k, v in name.items():
-            print(k, v)
+    for i in data['results']:
+        for k, v in i.items():
+            print(v)
 
 name_number_type()
+
 
 
 
